@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/css.css' %}" />
+
+    <title>Music Finder</title>
+  </head>
+  <body>
+    <header>
+      <h1>MUSIC FINDER</h1>
+    </header>
+    <div class="container">
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+      </form>
+      <p><a href="https://docs.google.com/spreadsheets/d/1jBNEBqY-sd-2XIjveztsXKUuQuHymbnT/edit?usp=drive_link&ouid=117640975622875564932&rtpof=true&sd=true"> Klik untuk melihat daftar musik yang ada</a>
+      </p>
+      <h1>Top Rekomendasi Lagu : </h1>
+      {% for row in song_detail%}
+      <div class="song_result">
+        <h2>Song : {{row.track_name}}</h2>
+        <p>Artist : {{row.artist_name}}</p>
+        <p>Release Date : {{row.release_date}}</p>
+        <p>Genre : {{row.genre}}</p>
+        <p>Topic : {{row.topic}}</p>
+      </div>
+      {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: 100%;
+    background-image: url("../image/wp1.jpg")
+}
+label {
+    display: inline;
+}
+header {
+    background-color: #ffffff60;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(2px);
+}
+header h1{
+    filter: none;
+}
+.container {  
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #ffffff60;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+}
+.container p, a{
+    text-align: center;
+    color: black;
+}
+.container a:hover{
+    color: blue;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+.song {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.song_result {
+    padding: 2%;
+    background-color: #fcf6eb80;
+    border-radius: 10px;
+    margin: 10px 15% 10px 15%;
+}
+.song_result p {
+    text-align: left !important;
+}
